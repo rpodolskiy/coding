@@ -1,0 +1,472 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: Lora;
+  font-display: swap;
+  src: url("../fonts/Lora-Regular.woff2") format("woff2"), url("../fonts/Lora-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Указываем box sizing */
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  background-color: #181719;
+  font-size: rem(18);
+  color: #fff;
+}
+
+body._lock {
+  overflow: hidden;
+}
+
+.page {
+  margin-bottom: 150px;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+._container {
+  max-width: 856px;
+  margin: 0 auto;
+}
+
+.header {
+  font-family: "Montserrat";
+  background-color: #181719;
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1332px;
+  padding: 0px 12px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__menu {
+  padding: 10px 0;
+  height: 92px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.menu__first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  height: 92px;
+  padding: 10px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-first__link {
+  border: 1px solid #fff;
+  padding: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu__list li {
+  margin: 0px 0px 30px 0px;
+}
+
+.menu__list li:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
+.menu__link {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+}
+
+.icon-menu {
+  display: none;
+}
+
+.footer {
+  font-family: "Montserrat";
+  bottom: 0;
+  margin: 0 auto;
+  color: #a9a9a9;
+  font-size: 14px;
+  height: 50px;
+}
+
+.footer__username {
+  font-weight: bold;
+  border-bottom: 1px solid #a9a9a9;
+  cursor: pointer;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #a9a9a9;
+  cursor: pointer;
+}
+
+.interior__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1332px;
+  margin: 0 auto;
+}
+
+.interior__title {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 61px;
+}
+
+.interior__text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.interior__btn {
+  font-family: "Montserrat";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 0px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.no-webp .interior__picture{
+  background: url("../img/img.jpg"); }
+
+.interior__picture {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 821px;
+          flex: 0 0 821px;
+  height: 586px;
+  overflow: hidden;
+}
+
+.user {
+  background-color: #181719;
+  margin: 0 auto;
+  width: 410px;
+  height: 189px;
+}
+
+.user__description {
+  padding: 0px 15px;
+  font-family: Lora;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 31px;
+  color: #fff;
+}
+
+.user__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user__content img {
+  padding: 10px 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 85px;
+          flex: 0 0 85px;
+  height: 85px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user__content-information {
+  padding: 23px 0px 30px 23px;
+}
+
+.user__content-information_name {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.user__content-information_position {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #828282;
+}
+
+@media (min-width: 767.98px) {
+  .header {
+    margin-bottom: 50px;
+  }
+
+  .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .menu__list li {
+    margin: 0px 86px 0px 0px;
+  }
+
+  .interior__title {
+    margin: 180px 0px 40px 0px;
+  }
+
+  .interior__text {
+    margin: 0px 0px 40px 0px;
+  }
+
+  .user {
+    top: 640px;
+    left: 1100px;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@media (min-width: 991.98px) {
+  .menu__link:hover {
+    border-bottom: 1px solid #fff;
+  }
+
+  .menu__link:focus {
+    border-bottom: 2px solid #fff;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 991.98px) {
+  ._container {
+    max-width: none;
+    padding: 0 10px;
+  }
+
+  .header__menu {
+    height: 60px;
+  }
+}
+
+@media (max-width: 868px) {
+  ._container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .menu__body {
+    -webkit-transform: translate(0px, -100%);
+        -ms-transform: translate(0px, -100%);
+            transform: translate(0px, -100%);
+    -webkit-transition: -webkit-transform 0.8s ease 0s;
+    transition: -webkit-transform 0.8s ease 0s;
+    -o-transition: transform 0.8s ease 0s;
+    transition: transform 0.8s ease 0s;
+    transition: transform 0.8s ease 0s, -webkit-transform 0.8s ease 0s;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    padding: 200px 10px 30px 10px;
+    background-color: #181719;
+  }
+
+  .menu__body._active {
+    -webkit-transform: translate(0px, 0%);
+        -ms-transform: translate(0px, 0%);
+            transform: translate(0px, 0%);
+  }
+
+  .menu__link {
+    font-size: 18px;
+    display: block;
+    text-align: center;
+  }
+
+  .icon-menu {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .icon-menu span,
+  .icon-menu::before,
+  .icon-menu::after {
+    content: "";
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+  }
+
+  .icon-menu::before {
+    top: 0px;
+  }
+
+  .icon-menu::after {
+    bottom: 0px;
+  }
+
+  .icon-menu span {
+    top: calc(50% - 1px);
+  }
+
+  .icon-menu._active span {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+
+  .icon-menu._active::before {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: calc(50% - 1px);
+  }
+
+  .icon-menu._active::after {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    bottom: calc(50% - 1px);
+  }
+}
+
+.webp .interior__picture{ background: url(../img/img.webp); }
