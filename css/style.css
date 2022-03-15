@@ -267,12 +267,11 @@ body._lock {
       -ms-flex: 0 0 821px;
           flex: 0 0 821px;
   height: 586px;
-  overflow: hidden;
 }
 
 .user {
   background-color: #181719;
-  margin: 0 auto;
+  margin: 500px 0px 0px 200px;
   width: 410px;
   height: 189px;
 }
