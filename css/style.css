@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 @font-face {
   font-family: Lora;
   font-display: swap;
@@ -16,8 +14,6 @@
   font-style: normal;
 }
 
-/* Указываем box sizing */
-
 *,
 *::before,
 *::after {
@@ -25,14 +21,10 @@
           box-sizing: border-box;
 }
 
-/* Убираем внутренние отступы */
-
 ul[class],
 ol[class] {
   padding: 0;
 }
-
-/* Убираем внешние отступы */
 
 body,
 h1,
@@ -51,8 +43,6 @@ dd {
   margin: 0;
 }
 
-/* Выставляем основные настройки по-умолчанию для body */
-
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -60,34 +50,24 @@ body {
   line-height: 1.5;
 }
 
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-
 ul[class],
 ol[class] {
   list-style: none;
 }
-
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
 }
 
-/* Упрощаем работу с изображениями */
-
 img {
   max-width: 100%;
   display: block;
 }
 
-/* Указываем понятную периодичность в потоке данных у article*/
-
 article > * + * {
   margin-top: 1em;
 }
-
-/* Наследуем шрифты для инпутов и кнопок */
 
 input,
 button,
@@ -108,12 +88,15 @@ body._lock {
 
 .page {
   margin-bottom: 150px;
+  padding: 90px 0px 0px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .wrapper {
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,49 +214,50 @@ body._lock {
   margin: 0 auto;
 }
 
+.interior__content {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 60px 90px 0px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.interior__content *:last-child {
+  margin-bottom: 0;
+}
+
 .interior__title {
-  font-family: Lora;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 61px;
+  margin: 180px 0px 40px 0px;
 }
 
 .interior__text {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
+  margin: 0px 0px 40px 0px;
 }
 
 .interior__btn {
-  font-family: "Montserrat";
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0px 0px;
-  text-decoration: none;
-  color: #fff;
-  cursor: pointer;
+  margin: 0px 0px 40px 0px;
 }
 
-.no-webp .interior__picture{
+.no-webp .interior__picture {
   background: url("../img/img.jpg"); }
 
 .interior__picture {
-  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 821px;
           flex: 0 0 821px;
   height: 586px;
+  background-repeat: no-repeat;
 }
 
 .user {
   background-color: #181719;
-  margin: 500px 0px 0px 200px;
+  margin: 500px 0px 0px 350px;
   width: 410px;
   height: 189px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .user__description {
@@ -321,11 +305,35 @@ body._lock {
   color: #828282;
 }
 
-@media (min-width: 767.98px) {
-  .header {
-    margin-bottom: 50px;
-  }
+.title {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 61px;
+}
 
+.text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.btn {
+  font-family: "Montserrat";
+  font-weight: bold;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 0px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (min-width: 767.98px) {
   .menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -334,21 +342,6 @@ body._lock {
 
   .menu__list li {
     margin: 0px 86px 0px 0px;
-  }
-
-  .interior__title {
-    margin: 180px 0px 40px 0px;
-  }
-
-  .interior__text {
-    margin: 0px 0px 40px 0px;
-  }
-
-  .user {
-    top: 640px;
-    left: 1100px;
-    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -378,9 +371,21 @@ body._lock {
   ._container {
     max-width: 750px;
   }
+
+  .interior {
+    padding: 0px 0px 70px 0px;
+  }
+
+  .interior__content {
+    padding: 60px 50px 0px 0px;
+  }
 }
 
 @media (max-width: 767.98px) {
+  .page {
+    padding: 40px 0px 0px 0px;
+  }
+
   .menu__body {
     -webkit-transform: translate(0px, -100%);
         -ms-transform: translate(0px, -100%);
@@ -466,6 +471,52 @@ body._lock {
             transform: rotate(45deg);
     bottom: calc(50% - 1px);
   }
+
+  .interior {
+    padding: 0px 0px 60px 0px;
+  }
+
+  .interior__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .interior__title {
+    margin: 90px 0px 20px 0px;
+  }
+
+  .interior__text {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .interior__btn {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .interior__picture {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 390px;
+            flex: 0 0 390px;
+    height: 290px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .btn {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
-.webp .interior__picture{ background: url(../img/img.webp); }
+.webp .interior__picture { background: url(../img/img.webp); }
